@@ -25,11 +25,24 @@ module.exports = ({ artist, album, track }) => {
 			}
 		})
 		.then((track) => {
+			if (!track) {
+				return Promise.reject("No track found");
+			}
 			return SPClient.create(accessToken).then((spClient) => {
 				return spClient.postCanvasRequest(track.uri).then((result) => {
 					return result;
 				});
 			});
 		})
-		.then((result) => result.canvases[0].url);
+		.then((result) => {
+			if (
+				result.canvases &&
+				result.canvases.length > 0 &&
+				result.canvases[0].url
+			) {
+				return result.canvases[0].url;
+			} else {
+				return Promise.reject("No Spotify Canvas found for that track");
+			}
+		});
 };
