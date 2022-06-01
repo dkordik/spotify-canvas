@@ -1,0 +1,16 @@
+{
+	"name": "spotify-canvas",
+	"version": "1.0.0",
+	"description": "Get Spotify Canvas (short track video from mobile apps) URL for a given artist/album/track",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Dan Kordik",
+	"license": "ISC",
+	"dependencies": {
+		"node-fetch": "^2.6.1",
+		"protobufjs": "^6.10.2",
+		"spotify-web-api-node": "^5.0.2"
+	}
+}
