@@ -1,6 +1,6 @@
 {
 	"name": "spotify-canvas",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Get Spotify Canvas (short track video from mobile apps) URL for a given artist/album/track",
 	"main": "index.js",
 	"scripts": {
